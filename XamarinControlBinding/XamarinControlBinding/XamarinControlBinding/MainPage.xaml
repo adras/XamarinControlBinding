@@ -9,9 +9,9 @@
     </ContentPage.BindingContext>
     <StackLayout>
         <Label FontSize="24" TextColor="#335599">Example for a custom control in Xamarin</Label>
-        <!-- Important it needs to be a TwoWay Binding, otherwise when the model is changed, the Entry fields are not updated -->
-        <ctrl:LabeledDecimalBox LabelText="Expected Value:" EntryValue="{Binding Soll, Mode=TwoWay}"></ctrl:LabeledDecimalBox>
-        <ctrl:LabeledDecimalBox LabelText="Actual Value:" EntryValue="{Binding Ist, Mode=TwoWay}"></ctrl:LabeledDecimalBox>
+        <!-- Important it needs to be a TwoWay Binding(default), otherwise when the model is changed, the Entry fields are not updated -->
+        <ctrl:LabeledDecimalBox LabelText="Expected Value:" EntryValue="{Binding Soll}"></ctrl:LabeledDecimalBox>
+        <ctrl:LabeledDecimalBox LabelText="Actual Value:" EntryValue="{Binding Ist}"></ctrl:LabeledDecimalBox>
         <ctrl:LabeledDecimalBox LabelText="Difference:" EntryValue="{Binding Difference}"></ctrl:LabeledDecimalBox>
         <StackLayout Margin="20, 0, 0,0" Orientation="Horizontal">
             <Button Text="Add Random values" Command="{Binding NextCommand}"></Button>
